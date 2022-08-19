@@ -1,0 +1,108 @@
+
+        * {
+            margin: 0px;
+            padding: 0px;  
+            border: 0px;          
+            font-family: Roboto, sans-serif;            
+        }
+        *, :after, :before {
+            box-sizing: border-box;
+        }
+
+        body {            
+            height: 100vh;
+            width: 100vw;
+            color: #333;
+            background-color: rgb(55, 55, 60);
+            font-size: 1rem;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;            
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            position: relative;
+            min-width: 450px;
+            max-width: 500px;    
+            width: 100%;
+            padding: 60px 60px 30px;            
+        }
+
+        .container .forms {
+            background: rgb(38, 38, 42);
+            border-radius: 10px;
+            padding: 30px;
+            gap: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .forms-container-inputs {
+            margin: 0px auto 0.6rem;
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            width: 100%;
+            min-height: 90px;
+        }
+
+        .forms-container-inputs-line {
+            display: flex;
+            flex-direction: column;
+            padding: 0.3em;
+        }
+
+        .labels {
+            color: rgb(225, 225, 225);
+            font-weight: 900;
+            font-size: 0.875rem;
+            margin: 0px 0px 0.4375rem;
+        }
+
+        .forms-inputs {
+            width: 100%;
+            max-width: 100%;
+            max-height: 40px;
+            font-size: 1rem;
+            flex: 1 1 0%;
+            border: 1px solid rgb(174, 174, 174);
+            border-radius: 5px;
+            background: rgb(72, 72, 76) ;
+            color: rgb(225, 225, 225);
+            padding: 0.625rem 1.25rem;
+            transition: border 0.3s ease 0s;
+        }
+
+        .forms-container-buttons {
+            align-self: center;
+        }
+
+        .buttons {
+            background-color: rgb(245, 179, 36);
+            padding: 10px 30px;
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            justify-content: center;
+            border-radius: 3px;
+            text-decoration: none;
+            transition: box-shadow 300ms ease 0s, filter 300ms ease 0s;
+            box-shadow: rgb(0 0 0 / 15%) 0px 5px 5px;
+            cursor: pointer;
+        }
+        
+        .buttons-label {
+            font-size: 1rem;
+            font-weight: 900;
+            line-height: 25px;
+            color: rgb(0, 0, 0);
+        }
+        .buttons:hover {
+            background-color: rgb(201, 147, 29);
+            border-radius: 5px;
+        }
