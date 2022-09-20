@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background: rgb(55, 55, 60);
+}
+
+.swiper{
+    width: 400px;
+    height: 400px;    
+    padding: 1px;
+}
+
+.swiper-slide{
+    background-position: center;
+    background-size: cover;
+}
+
+.swiper-slide img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

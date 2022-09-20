@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slides de imagens com Swiper</title>
+
+
+ <!-- Link Swiper's CSS -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+   
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="swiper mySwiper">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide"> 
+                <img src="thumbnail1.png" alt="">
+            </div>
+            <div class="swiper-slide"> 
+                <img src="thumbnail2.png" alt="">
+            </div>
+            <div class="swiper-slide"> 
+                <img src="thumbnail3.png" alt="">
+            </div>
+            <div class="swiper-slide"> 
+                <img src="thumbnail4.png" alt="">
+            </div>
+            <div class="swiper-slide"> 
+                <img src="thumbnail5.png" alt="">
+            </div>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>        
+
+    </div>
+
+    <!-- Swiper JS -->
+    <script 
+    src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+
+        var swiper = new Swiper(".mySwiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+
+        });
+
+    </script>
+
+    
+</body>
+</html>
