@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Slide de imagens 3d com Swiper</title>
+
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+
+        <div class="swiper mySwiper">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <img src="thumbnail1.png" >
+                </div>
+                <div class="swiper-slide">
+                    <img src="thumbnail2.png" >
+                </div>
+                <div class="swiper-slide">
+                    <img src="thumbnail3.png" >
+                </div>
+                <div class="swiper-slide">
+                    <img src="thumbnail4.png" >
+                </div>
+                <div class="swiper-slide">
+                    <img src="thumbnail5.png" >
+                </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>	  
+
+        <script>
+
+            const swiper = new Swiper(".mySwiper", {
+                effect: "cube",
+                grabCursor: true,
+                cubeEffect:{
+                    shadow: true,
+                    slideShadows: true,
+                    shadowOffeset: 20,
+                    shadowScale: 0.94,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                }
+
+            });
+
+        </script>
+        
+    </body>
+</html>
