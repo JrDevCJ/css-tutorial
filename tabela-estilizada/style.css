@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+}
+
+.container{
+    color: #000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 50%; 
+    background-color: rgb(245,242,242);
+    padding: 2px 0;
+    border-radius: 5px;
+    -webkit-box-shadow: 3px 3px 3px 3px rgba(50, 50, 50, 0.77);
+    -moz-box-shadow: 3px 3px 3px 3px rgba(50, 50, 50, 0.77);
+    box-shadow: 3px 3px 3px 3px rgba(50, 50, 50, 0.77);
+}
+
+.container table{
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+}
+
+.container table tr th{
+    height: 56px;
+    font-size: 16px;
+    font-weight: 700;
+   letter-spacing: .25px;
+   text-align: left;
+   padding: 0 10px;
+}
+.container table tr.item td{
+    border-bottom: 1px solid #c8cacc;
+    padding: 0 10px;
+}
+.container table tr.item{
+    height: 60px;
+}
+.container table tr td.icone{
+    width: 5%;
+}
+.container table tr td {
+    vertical-align: middle;
+    width: 20%;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+}
+.container table tr td .button{
+    font-size: 14px;
+    max-width: 90px;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #0019ff;
+    border: 2px solid #0019ff;
+    border-radius: 5px;
+    background-color: transparent;
+    padding: 8px 10px;
+    min-height: 20px;
+}
+
+.container table tr td .button:hover{
+    background-color: #dbdef6;
+}
+
+.negativo{
+    color: #ed0818;
+}
+.positivo{
+    color: #00a971;
+}
+.right{
+    text-align: right;
+}
