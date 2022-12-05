@@ -1,0 +1,98 @@
+*, 
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+    background-color: #282830;
+}
+
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 70%; 
+    background-color: #1e1e26;
+    padding: 5px 1px 1px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, #3bb4b4 0px 0px 0px 1px inset;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.card-title{
+    font-size: 2.125em;
+    line-height: 1.1em;
+    margin-bottom: 0.5rem;
+    margin: 1rem auto 0.5rem;
+    font-weight: 900;
+    color: #fff;
+}
+.list {
+    margin: 1rem auto 0;
+    width: 100%;
+    color: #3bb4b4 ;
+}
+.list-item {
+    list-style-type: none;
+    margin-bottom: 5px;
+}
+.list-item-content, .list-item-button {
+    background: #14141c;        
+    display: block;
+    text-align: left;
+}
+.list-item-button {
+    border: 0;
+    margin-bottom: 1px;
+    padding: 1rem 1.2rem;
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    text-transform: none;
+    overflow: visible;
+    color: inherit;
+    font-size: 1.8rem;
+    line-height: 1.5rem;
+}
+.list-item-button-icon {
+    fill: #fff;
+    height: 1em;
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    width: 1em;
+}
+.icon-closed {
+    transform: translateY(-50%) rotate(-45deg);
+}
+.icon-open {
+    transform: translateY(-50%);
+}
+.list-item-content {
+    overflow: hidden;
+    color: #fff;
+}
+.list-item-content p {
+    display: inline-block;
+    padding: 1.2em;
+}
+.list-item-content.list-item-closed {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .25s cubic-bezier(.5,0,.1,1);
+}
+.list-item-content.list-item-open {
+    max-height: 600px;
+    transition: max-height .25s cubic-bezier(.5,0,.1,1);
+}
