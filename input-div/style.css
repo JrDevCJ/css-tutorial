@@ -1,0 +1,138 @@
+*, 
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #1e1e26;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.card{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 0.8rem;
+    width: 50%; 
+    background: linear-gradient(-90deg,#00598a 0%,#04ab94 100%);  
+    border-radius: 0.5rem;
+    padding: 0.8rem;
+}
+.card.second{
+    background: #f8f9fa;
+}
+.icon, .button, .input{
+    display: inline-block;
+}
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.7rem;    
+}
+.input{
+    flex: 50%;    
+    border-radius: 5px;
+    padding: 3px;
+    font-size: 15px;
+    outline: none;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border: 1px solid transparent;
+    transition: all .2s ease-out;
+}
+.input:focus{    
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.button {   
+    font-size: 13px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    color: #fff;
+    background-color: #d64000;
+    border-radius: 5px;
+    padding: 15px 20px;
+    border: none;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+    transition: .3s ease-out;
+    transition-property: transform;    
+}
+.button:hover{    
+    transform: scale(1.08);
+    background-color: #c23a00;
+}
+
+@media (max-width: 991px) {
+    .card{
+        gap: 0.8rem;
+        width: 50%; 
+        padding: 0.8rem;
+    }
+    
+}
+
+@media (max-width: 820px) {
+    .card{
+        width: 80%;
+        gap: 0.5rem;
+        padding: 0.8rem 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container{
+        gap: 0.5rem;
+    }
+    .card{
+        width: 80%;
+        gap: 0.5rem;
+        padding: 0.8rem 0.5rem;
+    }
+    .icon{
+        font-size: 2.4rem;
+    }
+    .input{
+        flex: 35%;
+    }
+    .button {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 380px) {   
+    .card{
+        width: 90%;
+        gap: 0.2rem;
+        padding: 0.8rem 0.5rem;
+    }
+    .icon{
+        font-size: 2.1rem;
+    }
+    .input{
+        flex: 25%;
+    }
+    .button {
+        font-size: 10px;
+    }
+}
+
+
+
