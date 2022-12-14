@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Dialog</title>
+      <!-- Link da fonte está na descrição -->
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" 
+      rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <dialog id="formDialog"
+            class="container">
+        
+        <form method="dialog"
+                class="forms">
+
+            <section>
+                <div class="forms-container-inputs-line">
+                    <label for="txt-nome" class="labels">
+                        Nome:
+                    </label>
+                    <input type="text" 
+                            id="txt-nome"
+                            placeholder="Digite o nome"
+                            name="txt-nome"
+                            class="forms-inputs"/>
+                </div>
+
+                <div class="forms-container-inputs-line">
+                    <label for="txt-sobrenome" 
+                            class="labels">
+                        Sobrenome:
+                    </label>
+                    <input type="text" 
+                            id="txt-sobrenome"
+                            placeholder="Digite o sobrenome"
+                            name="txt-sobrenome"
+                            class="forms-inputs"/>
+                </div>
+
+            </section>
+
+            <div class="forms-container-buttons">
+
+                <button type="submit"
+                        class="buttons">
+                    Salvar
+                </button>
+
+                <button type="reset"
+                        class="buttons"
+                        id="btnCancelar">
+                    Cancelar
+                </button>
+
+            </div>    
+
+        </form>       
+    
+    </dialog>
+
+    <div>
+        <button id="btnOpenForm" class="buttons">
+            Abrir Formulário
+        </button>
+    </div>
+
+    <script>
+        const openButton = document.getElementById("btnOpenForm");
+        const cancelButton  = document.getElementById("btnCancelar");
+        const dialog  = document.getElementById("formDialog");
+
+
+        openButton.addEventListener("click", () =>{
+            dialog.showModal();
+        });
+
+        cancelButton.addEventListener("click", () =>{
+            dialog.close();
+        });
+
+    </script>
+    
+</body>
+</html>
