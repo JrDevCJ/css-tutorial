@@ -1,0 +1,143 @@
+*, 
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #fff;
+  padding: 0px 0.625rem;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  border: 1px solid #d5dfff;
+  border-radius: 4px;
+  transition: 0.5s ease-in-out;
+}
+.card:hover {
+  box-shadow: 0 2px 15px 0 rgb(0 0 0 / 15%);
+  transform: scale(1.08);
+}
+.card-title {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 0.085em;
+  color: #2f1c6a;
+  padding: 6px 0px;
+  text-align: center;
+}
+.card-subtitle {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.09em;
+  color: #2f1c6a;
+  padding: 8px 0px;
+  text-align: center;
+}
+.card-desconto-container,
+.card-preco {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.card-desconto-container {
+  margin-top: 36px;
+  padding: 8px;
+  gap: 4px;
+}
+.card-desconto-container .desconto-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.035em;
+  text-decoration-line: line-through;
+  color: #2f1c6a;
+}
+.card-desconto-container .desconto-badge {
+  background: #ebe4ff;
+  border-radius: 16px;
+  padding: 8px 12px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.035em;
+  color: #673de6;
+}
+.desconto-badge.second-badge {
+  background: #F1D1E3;
+  color: #D6317A;
+}
+.card-preco {
+  margin-top: 6px;
+  align-items: baseline;
+  color: #2f1c6a;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+}
+.card-preco .preco-valor {
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: 0.025em;
+  padding: 0 1px;
+}
+.card-preco-observacao {
+  display: block;
+  padding: 8px 2px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.025em;
+  text-align: center;
+  color: #594988;
+}
+.card-button {
+  display: block;
+  margin-top: 20px;
+  padding: 14px 40px;
+  background: #673de6;
+  border-radius: 4px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.035em;
+  color: #fff;
+}
+.card-button.second-button {
+  background: #fc5185;
+  color: #fff;
+}
+.card-observacao {
+  margin-top: 14px;
+  padding: 8px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.005em;
+  text-align: center;
+  color: #2f1c6a;
+}
