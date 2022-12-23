@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Card System Info</title>
+
+    <!-- Link da fonte está na descrição -->
+    <!-- Font Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+    <div class="card">
+
+        <div class="card-header">
+            <span class="badge "></span>
+            <h3>Host</h3>
+            <h5>Status</h5>
+        </div>
+
+        <div class="card-body">
+
+            <div class="element">
+
+                <div class="text-info">
+                    <span>
+                        <img src="img/icons8-electronics-48.png">
+                        <h3>CPU</h3>
+                    </span>
+                    <h5>60% / 3.3 Ghz</h5>
+                </div>
+                <div class="progress-bar">
+                    <span class="progress" style="width: 60%;"></span>
+                </div>
+
+            </div>
+
+            <div class="element">
+
+                <div class="text-info">
+                    <span>
+                        <img src="img/icons8-memory-slot-32.png" />
+                        <h3>Mem</h3>
+                    </span>
+                    <h5>25% / 4GB (16 GB)</h5>
+                </div>
+                <div class="progress-bar">
+                    <span class="progress warning" style="width: 25%;"></span>
+                </div>
+
+            </div>
+
+            <div class="element">
+
+                <div class="text-info">
+                    <span>
+                        <img src="img/icons8-harddisk-64.png" />
+                        <h3>HD</h3>
+                    </span>
+                    <h5>44% / 110GB (250 GB)</h5>
+                </div>
+                <div class="progress-bar">
+                    <span class="progress success" style="width: 44%;">
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="element">
+
+                <div class="text-info">
+                    <span>
+                        <img src="img/icons8-cloud-backup-restore-50.png" />
+                        <h3>Lan</h3>
+                    </span>
+                    <span>
+                        6 Mb/s
+                        <ion-icon name="arrow-down" style="color: green;"></ion-icon>
+                        &nbsp;
+                        3 Mb/s
+                        <ion-icon name="arrow-up" style="color: red;"></ion-icon>
+                    </span>
+                </div>
+                <div class="progress-bar">
+                    <span class="progress danger" style="width: 78%;">
+                    </span>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- 
+        Icons Referência: 
+        href="https://icons8.com">Icons8</a> 
+    -->
+
+</body>
+
+</html>

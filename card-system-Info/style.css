@@ -1,0 +1,135 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body * {
+  font-family: "Roboto", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #282830;
+}
+.card {
+  width: 272px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 12px 16px 12px;
+  background-color: #1e1e26;
+  color: rgba(244, 244, 245, 0.6);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  /* box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset; */
+}
+.card-header {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 14px;
+  padding: 8px;
+}
+.card-header .badge {
+  width: 12px;
+  height: 12px;
+  border-radius: 8px;
+  background-color: #d72337;
+  animation: animate-status 2.5s linear infinite;
+}
+.card-header h3 {
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.005em;
+  color: #3bb4b4;
+}
+.card-header h2 {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.04em;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 8px;
+  gap: 2px;
+}
+.card-body .element {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px;
+}
+.element .text-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;  
+  justify-content: space-between;
+}
+.element .text-info span{
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+.element .text-info span img{
+  height: 16px; 
+  width: 16px;
+}
+.element .text-info span h3, .element .text-info h5, .element .text-info span{
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.02em;
+}
+.element .text-info h3 {
+  font-weight: 900;  
+}
+.element .progress-bar {
+  height: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #474d84;
+  border-radius: 4px;
+  
+}
+.progress-bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  overflow: hidden;
+  background: #286ed2;
+  transition: width 0.6s ease;
+}
+.progress-bar .success {
+  background: #82af69;
+}
+.progress-bar .warning {
+  background: #f59b37;
+}
+.progress-bar .danger {
+  background: #d72337;
+}
+
+@keyframes animate-status {
+  0% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 0.9;
+  }
+
+  100% {
+    opacity: 0.3;
+  }
+}
