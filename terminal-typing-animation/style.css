@@ -1,0 +1,108 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+body {
+  height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f7;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+}
+.terminal {
+  position: relative;
+  width: 500px;
+  max-width: 600px;
+  border-radius: 6px;
+  padding-top: 45px;
+  margin-top: 8px;
+  overflow: hidden;
+  background-color: rgb(15, 15, 16);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+}
+.terminal::before {
+  content: "\2022 \2022 \2022";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: rgb(58, 58, 58);
+  color: #c2c3c4;
+  width: 100%;
+  font-size: 2rem;
+  line-height: 0;
+  padding: 14px 0;
+  text-indent: 4px;
+}
+.terminal pre {
+  display: flex;
+  flex-direction: row;
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  color: lime;
+  padding: 0 1rem 1rem;
+  margin: 0;
+}
+.terminal pre p {
+  white-space: nowrap;
+  overflow: hidden;
+}
+.terminal pre:nth-child(1) p {
+  width: 3.5em;
+  animation: typing  0.5s steps(30, end);
+}
+.terminal pre:nth-child(2) {
+  animation: typing2 4s steps(50, end);
+}
+.terminal pre:nth-child(3) {
+  animation: typing2 5s steps(50, end);
+}
+.terminal pre:nth-child(4) {
+  animation: typing2 6s steps(50, end);
+}
+.terminal pre:nth-child(5) {
+  animation: typing2 7s steps(50, end);
+}
+.terminal pre:nth-child(6) {
+  animation: typing2 8s steps(50, end);
+}
+span {
+  display: block;
+  padding: 1px 0px;
+  background-color: lime;
+  animation: blink 0.8s infinite;
+}
+@keyframes typing  {
+  from {
+    width: 0;
+  }
+}
+@keyframes typing2 {
+  0% {
+    width: 0;
+  }
+  40% {
+    width: 0;
+  }
+  100% {
+    width: 500px;
+  }
+}
+@keyframes blink {
+  to {
+    opacity: 0.3;
+  }
+}
