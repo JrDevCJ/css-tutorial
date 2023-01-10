@@ -1,0 +1,109 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F4F2FF;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.card {
+  background: #0E1A33;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.gauge-container{
+  height: 100px;
+  overflow-y: hidden;
+  padding: 20px;
+}
+.gauge {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(45deg, orange, purple);
+  border-radius: 50%;
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+}
+.gauge-inner {
+  width: 90%;
+  height: 90%;
+  background-color: #292d57;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gauge-inner .gauge-pointer {
+  position: relative;
+  margin-top: -120px;
+  width: 8px;
+  height: 110px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border-radius: 8px;
+  border: solid 2px #292d57;
+  background-image: linear-gradient(
+    45deg,
+    rgb(241, 200, 122),
+    rgb(238, 31, 238)
+  );
+  transition: all ease;
+  transform-origin: 10% 100%;
+  animation: clock 10s infinite ease;
+  z-index: 10;
+}
+.gauge-inner-circle {
+  position: absolute;
+  padding: 20px;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    40deg,
+    rgb(241, 200, 122),
+    rgb(238, 31, 238)
+  );
+  z-index: 11;
+}
+.gauge-numbers {
+  position: relative;
+  width: 100%;
+  margin-top: -96px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #0E1A33;
+  color: #fff;
+  font-weight: 900;
+  padding-top: 2px;
+  z-index: 12;
+}
+@keyframes clock {
+  0% {
+    transform: rotate(-92deg);
+  }
+  50% {
+    transform: rotate(86deg);
+  }
+  100% {
+    transform: rotate(-92deg);
+  }
+}
