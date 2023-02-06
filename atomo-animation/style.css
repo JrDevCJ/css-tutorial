@@ -1,0 +1,148 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  text-decoration: none;
+}
+:root {
+  --blue: #1e94d2;
+  --green: rgb(35, 221, 122);
+  --orange: #f59b37;
+  --black: #282830;
+}
+body * {
+  font-family: "Inter", sans-serif;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black);
+}
+.container-atomos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circle1,
+.circle2,
+.circle3 {
+  position: absolute;
+  width: 40px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+.circle2 {
+  transform: rotate(45deg);
+}
+.circle3 {
+  transform: rotate(-45deg);
+}
+.inner {
+  width: 10px;
+  height: 130px;
+  transition: all 0.2s ease-in-out;
+}
+.inner-circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--blue);
+}
+.circle1 > .inner {
+  animation: clock 10s infinite ease;
+}
+.circle2 > .inner {
+  animation: clock 6s infinite ease;
+}
+.circle3 > .inner {
+  animation: clock 8s infinite ease;
+}
+.icon-container {
+  padding: 0;
+  display: flex;
+  border-radius: 50%;
+  background: transparent;
+  transition: all 0.2s ease-in-out;
+  animation: icon-anime 2s linear infinite;
+}
+.icon {
+  color: yellow;
+  font-size: 25px;
+  line-height: 25px;
+  transition: all 0.2s ease-in-out;
+}
+@keyframes clock {
+  0% {
+    transform: rotate(0deg);
+    height: 130px;
+  }
+  6% {
+    transform: rotate(23deg);
+    height: 90px;
+  }
+  12% {
+    transform: rotate(45deg);
+    height: 70px;
+  }
+  18% {
+    transform: rotate(68deg);
+    height: 60px;
+  }
+  26% {
+    transform: rotate(90deg);
+    height: 52px;
+  }
+  32% {
+    transform: rotate(113deg);
+    height: 60px;
+  }
+  38% {
+    transform: rotate(135deg);
+    height: 68px;
+  }
+  50% {
+    transform: rotate(180deg);
+    height: 130px;
+  }
+  62% {
+    transform: rotate(225deg);
+    height: 70px;
+  }
+  74% {
+    transform: rotate(270deg);
+    height: 52px;
+  }
+  86% {
+    transform: rotate(315deg);
+    height: 70px;
+  }
+  100% {
+    transform: rotate(360deg);
+    height: 130px;
+  }
+}
+
+@keyframes icon-anime {
+  0% {
+    box-shadow: 0 0 0 0 rgba(235, 118, 15, 0.7);
+    transform: scale(0.95) rotate(0);
+  }
+  50% {
+    box-shadow: 0 0 0 40px rgba(235, 118, 15, 0);
+    transform: scale(1);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(235, 118, 15, 0.7);
+    transform: scale(0.95);
+  }
+}
