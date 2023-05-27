@@ -1,0 +1,131 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+}
+:root {
+  --white: #fff;
+  --black: #131826;
+  --blue: #4fa4b8;
+  --dark: #202740;
+  --purple: #474d84;
+  --orange: #ffae70;
+  --red: #d72337;
+  --green: #82af69;
+}
+body * {
+  font-family: "Roboto", sans-serif;
+}
+body {
+  height: 100vh;
+  background: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  width: 300px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--dark);
+  border-radius: 10px;
+  border: 1px solid rgb(18 216 178/1);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.card-title {
+  padding-bottom: 14px;
+  color: var(--white);
+  text-align: center;
+}
+.list,
+.list-item,
+.list-item-body,
+.list-item-header {
+  display: flex;
+}
+.list {
+  width: 100%;
+  padding: 10px;
+  flex-direction: column;
+  gap: 8px;
+}
+.list-item {
+  width: calc(100% - 20px);
+  max-height: 60px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+.list-item-header {
+  width: 20%;
+  align-items: center;
+}
+.list-item-header-badge {
+  position: fixed;
+  margin-top: -20px;
+  margin-left: -4px;
+  width: 14px;
+  display: block;
+  padding: 2px;
+  border-radius: 50%;
+  background-color: var(--red);
+  text-align: center;
+  font-weight: 900;
+  font-size: 10px;
+  line-height: 10px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
+    rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+  color: var(--white);
+}
+.list-item-icon {
+  width: calc(95% - 10px);
+  max-height: 50px;
+  border-radius: 50%;
+  border: 2px solid var(--green);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.list-item-body {
+  width: 80%;
+  flex-direction: column;  
+}
+.list-item-title {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 900;
+  color: var(--white);
+  letter-spacing: 0.125rem;
+}
+.list-item-subtitle {
+  font-size: 10px;
+  line-height: 10px;
+  font-weight: 500;
+  color: var(--blue);
+  letter-spacing: 0.1rem;
+}
+.list-item-progress-bar {
+  height: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 2px;
+  background: var(--purple);
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.list-item-progress-bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  overflow: hidden;
+  background: var(--red);
+  transition: width 0.6s ease;
+}
