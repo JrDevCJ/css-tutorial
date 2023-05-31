@@ -1,0 +1,105 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+}
+:root {
+  --white: #fff;
+  --black: #131826;
+  --blue: #4fa4b8;
+  --dark: #202740;
+  --purple: #474d84;
+  --orange: #ffae70;
+  --red: #d72337;
+  --green: #82af69;
+}
+body * {
+  font-family: "Roboto", sans-serif;
+}
+body {
+  height: 100vh;
+  background: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circular-menu {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+.circular-menu-container {
+  width: 200px;
+  height: 200px;
+  opacity: 0;
+  transform: scale(0) rotate(0deg);
+  transition: all 0.8s ease-in-out;
+  border-radius: 50%;
+  background-color: var(--dark);
+  border: 1px solid var(--red);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.open.circular-menu-container {
+  opacity: 1;
+  transform: scale(1) rotate(360deg);
+}
+.circular-menu-container .menu-item {
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  margin-left: -20px;
+  margin-top: -20px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--black);
+  color: var(--white);
+  font-size: 20px;
+  transition: all 0.8s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.menu-item:hover {
+  transform: translateY(-0.15rem);
+}
+.menu-button {
+  position: absolute;
+  height: calc(50% - 40px);
+  width: calc(50% - 40px);
+  top: calc(50% - 40px);
+  left: calc(50% - 40px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background: var(--red);
+  color: var(--white);
+  font-size: 50px;
+  transition: all 0.8s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.pulse {
+  animation: pulse 1.6s linear;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(71, 77, 132, 0.7);
+    transform: scale(1.02);
+  }
+  50% {
+    box-shadow: 0 0 0 60px rgba(235, 118, 15, 0);
+    transform: scale(1);
+  }
+  100% {
+    box-shadow: 0 0 0 80px rgba(235, 118, 15, 0);
+    transform: scale(1);
+  }
+}
