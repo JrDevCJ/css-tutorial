@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltip</title>
+    <!-- Link da fonte está na descrição -->
+    <!-- Font Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <a href="#" class="menu-button">
+        <ion-icon name="bulb-outline"></ion-icon>
+    </a>
+
+    <div class="tooltip">
+
+        <a href="#" class="menu-item">
+            <ion-icon name="code-working" class="menu-item-icon"></ion-icon>
+            <div class="menu-item-content">
+                <span class="menu-item-content-title">Code working</span>
+                <span class="menu-item-content-subtitle">Code working ...</span>
+            </div>
+        </a>
+        <a href="#" class="menu-item">
+            <ion-icon name="flash-outline" class="menu-item-icon"></ion-icon>
+            <div class="menu-item-content">
+                <span class="menu-item-content-title">Simples e rápido</span>
+                <span class="menu-item-content-subtitle">Para sites pequenos e médios.</span>
+            </div>
+        </a>
+
+    </div>
+
+    <script>
+
+        const tootltip = document.querySelector(".tooltip");
+        const menuButton = document.querySelector('.menu-button');
+
+        menuButton.addEventListener("click", (e) => {
+            tootltip.classList.toggle("active");
+            alternarMenuButtonIcon();
+        });
+
+
+        const alternarMenuButtonIcon = () => {
+
+            const mnuButtonIcon = document.querySelector('.menu-button ion-icon');
+            const isOpen = mnuButtonIcon.getAttribute('name') === 'bulb';
+            mnuButtonIcon.setAttribute('name', (isOpen ? 'bulb-outline' : 'bulb'));
+
+        }
+
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+}
+:root {
+  --white: #f2f2f2
+  --black: #131826;
+  --dark: #202740;
+  --blue: #d5dfff;
+  --green: #00b090;
+  --purple: #673de6;
+  --yellow: #fadf8e;
+  --gray: #686868;
+}
+body * {
+  font-family: "Roboto", sans-serif;
+}
+body {
+  height: 100vh;
+  background: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-button {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background: var(--purple);
+  color: var(--yellow);
+  font-size: 50px;
+  transition: all 0.8s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, 
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.menu-button:hover {
+  transform: translateY(-0.25rem);
+}
+.tooltip {
+  position: absolute;
+  padding: 0.2rem 0;
+  opacity: 0;
+  visibility: hidden; 
+  border-radius: 5px;
+  background: white;
+  transform: translateX(-50%);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  z-index: 1;
+  left: 50%;
+  margin-top: -230px;
+}
+.tooltip.active {
+  opacity: 1;
+  visibility: visible;
+}
+.tooltip:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  width: 0;
+  height: 0;
+  margin-left: -10px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid var(--dark);
+}
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.4rem 1rem;
+  border-bottom: 1px solid var(--blue);
+  transition: all 0.2s ease-in-out;
+}
+.menu-item:nth-last-child(1){
+  border-bottom: none;
+}
+.menu-item:hover {
+  transform: scale(1.04);
+  background-color: var(--blue);
+}
+.tooltip .menu-item-icon {
+  color: var(--green);
+  font-size: 24px;
+}
+.tooltip .menu-item-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.tooltip .menu-item-content-title {
+  font-size: 14px;
+  font-weight: 900;
+  color: var(--black);
+}
+.tooltip .menu-item-content-subtitle {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gray);
+}
