@@ -1,0 +1,79 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+}
+:root {
+  --white: #fff;
+  --black: #131826;
+  --blue: #4fc3f7;
+  --orange: #f7941e;
+  --red: #d6290b;
+  --green: #a3df51;
+  --gray: #eeeeee;
+}
+body * {
+  font-family: "Roboto", sans-serif;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--gray);
+}
+.card {
+  display: flex;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background-color: var(--white);
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
+    rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
+table{
+  border-spacing: 0.4rem;
+}
+thead th{
+  font-size: 1rem;
+  font-weight: 800;
+}
+tbody tr{
+  transition: all 0.1s ease-in-out;
+}
+tbody tr:hover{
+  transform: scale(1.05);
+}
+
+tbody td{
+  background-color: var(--gray);
+  padding: 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.125rem;
+  text-align: center;
+}
+tbody td:nth-child(1){
+  border-left: 5px solid var(--red);
+}
+tbody td.success{
+  background-color: var(--green);
+  color: var(--white);
+}
+tbody td.info{
+  background-color: var(--blue);
+  color: var(--white);
+}
+tbody td.danger{
+  background-color: var(--red);
+  color: var(--white);
+}
+tbody td.warning{
+  background-color: var(--orange);
+  color: var(--white);
+}
+.text-left{
+  text-align: left;
+}
