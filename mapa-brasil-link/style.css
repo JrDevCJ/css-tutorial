@@ -1,0 +1,75 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #7c89d3;
+}
+.container{
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+svg{
+  width: 40%;
+}
+.norte {
+  fill: #63ab3f;
+}
+.nordeste {
+  fill: #f0b541;
+}
+.centro-oeste {
+  fill: #ffae70;
+}
+.sudeste {
+  fill: #4fa4b8;
+}
+.sul {
+  fill: #686f99;
+}
+path {
+  fill: #1da1f2;
+  stroke: white;
+  stroke-width: 1px;
+}
+path:hover {
+  fill: purple;
+  stroke: red;
+  stroke-width: 3px;
+  transition: fill 0.4s;
+}
+.tooltip {
+  pointer-events: none;
+  position: absolute;
+  font-size: 18px;
+  text-align: center;
+  background: white;
+  padding: 10px 15px;
+  z-index: 5;
+  height: 30px;
+  line-height: 30px;
+  margin: 0 auto;
+  color: #21669e;
+  border-radius: 5px;
+  transform: translateX(-50%);
+  display: none;
+}
+.tooltip.active {
+  display: block;
+}
+.tooltip:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  width: 0;
+  height: 0;
+  margin-left: -10px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid white;
+}
