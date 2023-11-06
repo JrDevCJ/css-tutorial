@@ -1,0 +1,61 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+}
+:root {
+  --black: #000000;
+  --white: rgb(225, 225, 225);
+  --dark: rgb(15, 18, 22);
+  --dark-second: rgb(40, 44, 51);
+  --green: rgb(166, 247, 80);
+}
+body * {
+  font-family: "Roboto", sans-serif;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--dark);
+}
+.input-search {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0.625rem;
+  background: var(--dark-second);
+  border: 1px solid rgb(56, 60, 68);
+  border-radius: 5px;
+}
+.input-search input {
+  width: 100%;
+  font-size: 1rem;
+  color: rgb(225, 225, 225);
+  position: relative;
+  outline: none;
+  padding: 0.625rem 1.25rem;
+  background: var(--dark-second);
+  border: 1px solid transparent;
+}
+.input-search button {
+  height: 3.25rem;
+  padding: 0px 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  text-decoration: none;
+  background-color: var(--green);
+}
+.input-search button > svg {
+  font-size: 1.25rem;
+  margin-right: 0px;
+  color: var(--black);
+}
