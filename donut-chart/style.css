@@ -1,0 +1,104 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+:root {
+  --dark-blue: #17193b;
+  --purple: #474d84;
+  --purple-secondary: #333867;
+  --green: #2d8515;
+  --red: #db2a34;
+  --orange: orange;
+  --title-primary-color: rgb(231 226 226);
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--purple-secondary);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.title {
+  padding: 0.5rem;
+  border-radius: 6px;
+  background: var(--dark-blue);
+  text-align: center;
+  color: var(--orange);
+  font-weight: 900;
+  font-size: 24px;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border-radius: 6px;
+  background: var(--dark-blue);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.card-button {
+  gap: 2rem;
+  padding: 2rem;
+}
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 20px;
+  background-color: var(--green);
+  color: var(--title-primary-color);
+}
+button.minus {
+  background-color: var(--red);
+}
+button:hover {
+  transform: scale(0.99);
+}
+button:active {
+  background-color: rgb(128, 171, 74);
+  transform: scale(0.96);
+  transition: all 0.3s ease 0s;
+}
+.progress-bar {
+  height: 180px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: conic-gradient(orange 360deg, purple 0deg);
+  border-radius: 50%;
+  /* animation: pulse 3s infinite; */
+  transition: all ease;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.progress-bar-inner {
+  width: 85%;
+  height: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--dark-blue);
+  border-radius: 50%;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.progress-bar-inner h2 {
+  color: var(--title-primary-color);
+  font-weight: 900;
+  font-size: 40px;
+}

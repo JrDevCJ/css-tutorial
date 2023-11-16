@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Donut Chart</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+
+        <h2 class="title">Donut Chart</h2>
+
+        <div class="card">
+
+            <div id="circularProgressBar" class="progress-bar">
+                <div class="progress-bar-inner">
+                    <h2 class="progress-value">100%</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="card card-button">
+            <button onclick="addValue(5);">+</button>
+            <button class="minus" onclick="decreaseValue(5);">-</button>
+        </div>
+
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
