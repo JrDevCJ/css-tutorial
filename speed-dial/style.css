@@ -1,0 +1,98 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333867;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.title {
+  padding: 0.8rem;
+  border-radius: 6px;
+  background: #17193b;
+  text-align: center;
+  color: orange;
+  font-weight: 900;
+  font-size: 24px;
+}
+.speeddial {
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  z-index: 2;
+}
+.speeddial-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background: #2196f3;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 50px;
+  transition: 0.3s all ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.speeddial-button:active {
+  background-color: orange;
+  transform: scale(0.9);
+  transition: all 0.3s ease-in-out;
+}
+.speeddial-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: top 0s linear 0.2s;
+  pointer-events: none;
+}
+.speeddial-item {
+  transform: scale(0);
+  opacity: 0;
+  margin: 0.25rem 0;
+  transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, opacity 0.8s;
+  will-change: transform;
+}
+.speeddial-action {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  background: #495057;
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.speeddial-opened .speeddial-list {
+  pointer-events: auto;
+}
+.speeddial-opened .speeddial-item {
+  transform: scale(1);
+  opacity: 1;
+}
+.speeddial-opened .speeddial-button {
+  transform: rotate(45deg);
+}
