@@ -1,0 +1,92 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e1dddd;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.title {
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  background: #17193b;
+  text-align: center;
+  color: orange;
+  font-weight: 900;
+  font-size: 24px;
+}
+.card {  
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 1px 3px 0 rgba(0, 0, 0, 0.12);
+}
+.chronoline {
+  min-width: 300px;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+.chronoline-event {
+  display: flex;
+  position: relative;
+  min-height: 70px;
+}
+.chronoline-event:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.chronoline-event:nth-child(odd) .chronoline-event-opposite {
+  text-align: right;
+}
+.chronoline-event:nth-child(odd) .chronoline-event-content {
+  text-align: left;
+}
+.chronoline-event:nth-child(even) .chronoline-event-opposite {
+  text-align: left;
+}
+.chronoline-event:nth-child(even) .chronoline-event-content {
+  text-align: right;
+}
+.chronoline-event-opposite,
+.chronoline-event-content {
+  flex: 1;
+  padding: 0 1rem;
+  line-height: 1;
+}
+.chronoline-event-separator {
+  flex: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.chronoline-event-marker {
+  display: flex;
+  align-self: baseline;
+  border: 2px solid #2196f3;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  background-color: #fff;
+}
+.chronoline-event-connector {
+  width: 2px;
+  background-color: #dee2e6;
+  flex-grow: 1;
+}
