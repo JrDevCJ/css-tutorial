@@ -1,0 +1,69 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+body {
+  display: flex;
+  height: 100vh;
+  background-color: rgb(15, 18, 22);
+}
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding: 1rem;
+}
+.title {
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  background: #17193b;
+  text-align: center;
+  color: rgb(255, 216, 98);
+  font-weight: 900;
+  font-size: 28px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.inputRange {
+  width: 300px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  background: #17193b;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.inputRange input {
+  width: calc(80% -20px);
+  height: 10px;
+  appearance: none;
+  outline: none;
+  background: rgb(78, 172, 225);
+  border-radius: 5px;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.inputRange input::-webkit-slider-thumb {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: rgb(40, 44, 51);
+  border: solid 2px white;
+  border-radius: 50%;
+  cursor: grab;
+}
+.inputRange label {
+  font-size: 28px;
+  font-weight: 900;
+  color: rgb(166, 247, 80);
+}

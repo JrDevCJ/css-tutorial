@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Input Range</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2 class="title">Input Range</h2>
+
+
+        <div class="inputRange">
+            <label>Valor: 50%</label>
+            <input type="range" id="slider" min="0" max="100" value="50" step="1">
+        </div>
+
+
+        <script>
+
+            const inputRange = document.querySelector(".inputRange input");
+            const inputRangeLabel = document.querySelector(".inputRange label");
+
+            inputRange.addEventListener('input', function () {
+                inputRangeLabel.innerText = `Valor: ${this.value}%`;
+            });
+        </script>
+
+    </div>
+
+</body>
+
+</html>
