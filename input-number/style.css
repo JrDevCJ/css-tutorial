@@ -1,0 +1,74 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+body {
+  display: flex;
+  height: 100vh;
+  background-color: #fff;
+}
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding: 1rem;
+}
+.card {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 6px;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.title {
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  background: #17193b;
+  text-align: center;
+  color: rgb(255, 216, 98);
+  font-weight: 900;
+  font-size: 28px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.input-number {
+  width: 400px;
+  padding: 0.4rem;
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+  border-bottom: solid 4px #722d9c;
+}
+.input-number input {
+  width: 80%;
+  font-weight: 800;
+  font-size: 36px;
+  color: #4c0677;
+}
+.input-number-actions {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: space-between;
+}
+.input-number-actions button {
+  padding: 0.6rem;
+  width: 48px;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #4c0677;
+  font-weight: 900;
+  color: #fff;
+}
