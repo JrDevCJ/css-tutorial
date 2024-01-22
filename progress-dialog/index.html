@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Progress Dialog</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <button id="openButtonProgressDialog">Progress Dialog</button>
+
+        <dialog id="progressDialog" class="progress-dialog">
+
+            <div class="progress-dialog-container">
+
+                <div class="progress-bar">
+                    <span class="progress" style="width: 0%;">
+                        0%
+                    </span>
+                </div>
+
+                <label class="progress-bar-info-label">Carregando...</label>
+
+            </div>
+
+        </dialog>
+
+    </div>
+
+    <script>
+        const openButtonProgressDialog = document.getElementById("openButtonProgressDialog");
+        const progressDialog = document.getElementById("progressDialog");
+        const progressBar = document.querySelector(".progress-bar .progress");
+        const progressBarInfoLabel = document.querySelector('.progress-bar-info-label');
+
+        let progressValue = 0;
+        let dots = 0;
+
+        const startTimer = () => {
+            progressInterval = setInterval(() => {
+                setInfoProgressBar();
+            }, 1000);
+        };
+
+        const setInfoProgressBar = () => {
+
+            if (progressValue >= 100) {
+                progressDialog.close();
+                clearInterval(progressInterval);
+                progressValue = 0;
+            }
+
+            progressValue += 5;
+
+            progressBar.textContent = `${progressValue}%`;
+            progressBar.style.width = `${progressValue}%`;
+
+            dots = (dots + 1) % 4;
+            progressBarInfoLabel.textContent = `Carregando${'.'.repeat(dots)}`;
+
+        }
+
+        openButtonProgressDialog.addEventListener("click", () => {
+            progressDialog.showModal();
+            startTimer();
+        });
+
+    </script>
+
+</body>
+
+</html>
