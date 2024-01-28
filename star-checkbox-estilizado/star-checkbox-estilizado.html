@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Checkbox Estilizado</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color:  #17193b;
+        }
+        input[type="checkbox"] {
+            display: none;           
+        }
+        input[type="checkbox"]:checked+label::before {
+            content: "\2605";
+            color: #fa8a02;
+            font-size: 200px;
+        }
+        label {
+            cursor: pointer;
+            font-size: 200px;
+            user-select: none;
+        }
+        label::before {
+            content: "\2606";
+            color: #ccc;
+            font-size: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="estrelaCheckbox">
+    <label for="estrelaCheckbox"></label>
+</body>
+
+</html>
