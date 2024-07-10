@@ -17,31 +17,31 @@ const abbreviatedWeekdays = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
 
 const getDays = (currentDate) => {
   const diasAnteriores = getDiasAnteriores(currentDate);
-  const diasPosteriores = getProximosDias(currentDate);
+  const diasPosteriores = getNextDays(currentDate);
   const days = [...diasAnteriores, currentDate, ...diasPosteriores];
   days.sort((a, b) => a.getTime() - b.getTime());
   return days;
 };
 
-const getProximosDias = (data) => {
-  let proximosDias = new Date(data);
+const getNextDays = (data) => {
+  let nextDays = new Date(data);
   const tresProximosDias = [];
 
   for (let i = 0; i < 2; i++) {
-    proximosDias.setDate(proximosDias.getDate() + 1);
-    tresProximosDias.push(new Date(proximosDias));
+    nextDays.setDate(nextDays.getDate() + 1);
+    tresProximosDias.push(new Date(nextDays));
   }
 
   return tresProximosDias;
 };
 
 const getDiasAnteriores = (data) => {
-  let proximosDias = new Date(data);
+  let nextDays = new Date(data);
   const tresProximosDias = [];
 
   for (let i = 0; i < 2; i++) {
-    proximosDias.setDate(proximosDias.getDate() - 1);
-    tresProximosDias.push(new Date(proximosDias));
+    nextDays.setDate(nextDays.getDate() - 1);
+    tresProximosDias.push(new Date(nextDays));
   }
 
   return tresProximosDias;
