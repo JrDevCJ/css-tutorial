@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltip shake effect</title>
+
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tooltip-container {
+            position: relative;
+            display: inline-block;
+            padding: 1rem 2rem;
+            cursor: pointer;
+            font-size: 2em;
+            line-height: 2em;
+            color: #426DFB;
+            border: 1px solid #2356FF;
+            border-radius: 5px;
+        }
+        .tooltip {
+            visibility: hidden;
+            opacity: 0;
+            width: max-content;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: opacity 0.3s ease-in-out;
+            z-index: 1;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .tooltip::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #333 transparent transparent transparent;
+        }
+
+        .tooltip-container:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .shake {
+            animation: shake 0.5s;
+        }
+
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            10%,
+            30%,
+            50%,
+            70%,
+            90% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+
+            20%,
+            40%,
+            60%,
+            80% {
+                transform: translateX(-50%) translateY(5px);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="tooltip-container">
+        Passe o mouse aqui!
+        <div class="tooltip">
+            Tooltip com efeito shake!
+        </div>
+    </div>
+
+
+    <script>
+        const tooltipContainer = document.querySelector('.tooltip-container');
+        const tooltip = document.querySelector('.tooltip');
+
+        tooltipContainer.addEventListener('mouseenter', () => {
+            tooltip.classList.add('shake');            
+            setTimeout(() => {
+                tooltip.classList.remove('shake');
+            }, 500); 
+        });
+
+    </script>
+
+</body>
+
+</html>
