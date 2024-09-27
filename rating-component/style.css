@@ -1,0 +1,79 @@
+ body {
+            width: 100vw;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #111111;
+        }
+
+        .rating {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            border: 1px solid #b6b7f6;
+            background-color: #141920;
+            color: #b6b7f6;
+        }
+
+        .star-container {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+        }
+
+        .title {
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            gap: 0.5rem;
+            align-self: flex-start;
+            margin-bottom: 0.5rem;
+        }
+
+        .title span {
+            font-size: 2.25rem;
+            line-height: 2.25rem;
+            color: #82be0f;
+        }
+
+        .title .label {
+            font-weight: 900;
+            font-size: 1.5rem;
+            line-height: 1.5rem;
+            text-align: end;
+        }
+
+        .star {
+            padding: 1rem;
+            font-size: 2rem;
+            line-height: 2rem;
+            cursor: pointer;
+            color: #b6b7f6;
+            transition: color 0.2s, background-color 0.2s;
+            border: 1px solid #b6b7f6;
+            border-radius: 0.5rem;
+            box-sizing: border-box;
+        }
+
+        .star:hover,
+        .star.hover {
+            background-color: #82be0f;
+            color: white;
+            border-color: #82be0f;
+        }
+
+        .star.selected {
+            background-color: #82be0f;
+            color: white;
+            border-color: #82be0f;
+        }
+
+        .score-label {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 20px;
+        }
